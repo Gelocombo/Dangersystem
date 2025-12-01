@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DangerSystem</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="nav"></div>
+    </header>
+
+    <main>
+        <section id="register-form-section">
+            <h2>Registrar Novo Aviso</h2>
+            <form id="notice-form">
+                
+                <div class="form-group">
+                    <label for="notice-title">Título do Aviso:</label>
+                    <input type="text" id="notice-title" name="notice-title" class="campo-texto" 
+                           placeholder="Ex: Mudança de horário" required> </div>
+
+                <div class="form-group">
+                    <label for="notice-content">Mensagem:</label>
+                    <textarea id="notice-content" name="notice-content" class="campo-texto" 
+                              rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="notice-date">Data de Comunicação:</label>
+                    <input type="date" id="notice-date" name="notice-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notice-recipients">Destinatário(s):</label>
+                    <select id="notice-recipients" name="notice-recipients" multiple required>
+                        <option value="todos">Todos os Funcionários</option>
+                        <option value="marketing">Departamento de Marketing</option>
+                        <option value="financeiro">Setor Financeiro</option>
+                        <option value="ti">Equipe de T.I.</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submit-button">Registrar Aviso</button>
+            </form>
+        </section>
+
+        <section id="notice-list-section">
+            <h2>Avisos Registrados</h2>
+            <div id="notices-container">
+                <p class="empty-state">Nenhum aviso registrado ainda.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

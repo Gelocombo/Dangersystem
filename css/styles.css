@@ -1,0 +1,122 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Fundo claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    /* Critério 5: Layout limpo - Uso de Grid para as duas colunas */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Coluna do formulário e coluna da lista */
+    gap: 40px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Critério 3: Uso de seletores de classe */
+.campo-texto, 
+#notice-recipients {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo do Botão */
+#submit-button {
+    background-color: #28a745; /* Verde para ação de registro */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Critério 3: Uso de pseudo-classes (:hover) */
+#submit-button:hover {
+    background-color: #218838;
+}
+
+/* Estilo da Lista de Avisos */
+.notice-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #007BFF; /* Detalhe visual */
+    border-radius: 4px;
+}
+
+.notice-card h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.notice-card p {
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.empty-state {
+    text-align: center;
+    color: #6c757d;
+    padding: 30px;
+    border: 1px dashed #ced4da;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Critério 7: Responsividade - Ajuste para diferentes tamanhos de tela */
+@media (max-width: 800px) {
+    main {
+        /* Muda de 2 colunas para 1 coluna em telas menores */
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
